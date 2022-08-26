@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank you</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+      }
+      section {
+        height: 100vh;
+        background: #8400ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1.2em;
+      }
+
+      .wrapper {
+        background: #fdfaf7;
+        border-radius: 15px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-top: 1em;
+      }
+
+      .btn {
+        background: #8400ff;
+        padding: 0.5em 1.1em;
+        color: white;
+        font-weight: 700;
+        font-size: 1.3em;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 0 0 0 rgba(247, 0, 255, 0.4);
+        animation: pulse 2s infinite;
+        margin-top: 2em;
+
+      }
+
+     
+
+
+
+
+
+.btn:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow:  0 0 0 0 rgba(247, 0, 255, 0.4);
+  }
+  70% {
+      -webkit-box-shadow:  0 0 0 10 rgba(247, 0, 255, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(247, 0, 255, 0);
+  }
+}
+
+
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(247, 0, 255, 0.4);
+    box-shadow: 0 0 0 0 rgba(247, 0, 255, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(247, 0, 255, 0);
+      box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(247, 0, 255, 0);
+      box-shadow: 0 0 0 0 rgba(247, 0, 255, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      @media only screen and (min-width: 720px) {
+
+
+
+        .wrapper {
+          max-width: 720px;
+          padding: 40px 20px ;
+        }
+
+        h1 {
+        font-size: 2.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-top: 1em;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="wrapper">
+        <h1>
+          Congratulations! You have saved your spot in LIFESHAPERS workshop.
+        </h1>
+        <p>
+          Great decision! 😄 now click on below to join our PRIVATE WHATSAPP
+          group – where all the links and communication will be posted group.
+        </p>
+        <a href="https://chat.whatsapp.com/B6KVNMPZCSN9tOuzXoZ9K3">
+          <button class="btn ">TAP TO JOIN</button>
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

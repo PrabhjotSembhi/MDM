@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>1 day Lifeshaper Bootcamp</title>
+  </head>
+
+  <body>
+    <section class="hero">
+      <div class="wrapper">
+        <div class="l-col">
+          <div class="subhead">Don’t fright, eat right</div>
+          <h1>Become YOU, only HEALTHIER</h1>
+          <p class="in-5-days">That too, in 5 days</p>
+
+          <div class="pc">
+            <div class="contdown-wrapper">
+              <div class="time-inner-wrap">
+                <div class="ct-time days"></div>
+                <div class="time-metric">Days</div>
+              </div>
+
+              <div class="time-inner-wrap">
+                <div class="ct-time hours"></div>
+                <div class="time-metric">Hours</div>
+              </div>
+
+              <div class="time-inner-wrap">
+                <div class="ct-time minutes"></div>
+                <div class="time-metric">Minutes</div>
+              </div>
+
+              <div class="time-inner-wrap">
+                <div class="ct-time seconds"></div>
+                <div class="time-metric">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="r-col">
+          <iframe
+            class="video"
+            src="https://www.youtube.com/embed/aOCIoJA1Ww0?controls=0"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+
+          <p class="free-entry">
+            Get free DAY 1 Entry to our 5 DAYS Fat Loss Bootcamp
+          </p>
+
+          <div class="mb">
+            <div class="contdown-wrapper">
+              <div class="time-inner-wrap">
+                <div class="ct-time days"></div>
+                <div class="time-metric">Days</div>
+              </div>
+
+              <div class="time-inner-wrap">
+                <div class="ct-time hours"></div>
+                <div class="time-metric">Hours</div>
+              </div>
+
+              <div class="time-inner-wrap">
+                <div class="ct-time minutes"></div>
+                <div class="time-metric">Minutes</div>
+              </div>
+
+              <div class="time-inner-wrap">
+                <div class="ct-time seconds"></div>
+                <div class="time-metric">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <a href="https://chat.whatsapp.com/DKFKyT72NEF4RFewhiizaO">
+          <button class="btn">Get Day 1 Free Entry</button>
+        </a>
+      </div>
+    </section>
+
+    <section class="before-after">
+      <div class="wrapper">
+        <div class="subhead">FAD DIETS = ₹1000 = USELESS</div>
+        <h2 class="title">Ditch celebrity bodies, pitch health to your body!</h2>
+        <p class="subhead-2">PROVEN ON 5,672 PEOPLE…</p>
+
+        <div class="testimonial-slider">
+          <img class="slide-img" src="./img/result-1.png" alt="" />
+          <img class="slide-img" src="./img/result-2.png" alt="" />
+          <img class="slide-img" src="./img/result-3.png" alt="" />
+          <img class="slide-img" src="./img/result-4.png" alt="" />
+          <img class="slide-img" src="./img/result-5.png" alt="" />
+          <img class="slide-img" src="./img/result-6.png" alt="" />
+        </div>
+      </div>
+
+      <div class="btn-wrap">
+        <a href="https://chat.whatsapp.com/DKFKyT72NEF4RFewhiizaO">
+          <button class="btn">Get Day 1 Free Entry</button>
+        </a>
+      </div>
+    </section>
+
+    <script>
+      const slides = document.querySelectorAll(".slide-img");
+      let count = 1;
+      let items = document.querySelectorAll(".slide-img").length;
+
+      let nextSlide = function () {
+        if (count < items) {
+          slides.forEach((slide) => {
+            
+            slide.style.transform = `translateX(-${count * 322}px)`;
+          });
+          count++;
+        } else if ((count = items)) {
+          slides.forEach((slide) => {
+            slide.style.transform = `translateX(0%)`;
+          });
+          count = 1;
+        }
+      };
+
+
+      setInterval(function () {
+        nextSlide();
+      }, 3000);
+
+      // Counter
+      let countDownDate = new Date("Aug 28, 2022 23:59:25").getTime();
+
+      let Alldays = document.querySelectorAll(".days");
+      let Allhours = document.querySelectorAll(".hours");
+      let Allminutes = document.querySelectorAll(".minutes");
+      let Allseconds = document.querySelectorAll(".seconds");
+
+      // Update the count down every 1 second
+      let x = setInterval(function () {
+        // Get today's date and time
+        let now = new Date().getTime();
+
+        // Find the distance between now and the count down 8date
+        let distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        Alldays.forEach((dayz) => (dayz.innerHTML = days));
+        Allhours.forEach((dayz) => (dayz.innerHTML = hours));
+        Allminutes.forEach((dayz) => (dayz.innerHTML = minutes));
+        Allseconds.forEach((dayz) => (dayz.innerHTML = seconds));
+      }, 1000);
+    </script>
+  </body>
+</html>
