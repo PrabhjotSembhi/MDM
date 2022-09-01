@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>4 STEP FREAMEWORK</title>
+</head>
+
+<body>
+    <section class="hero">
+        <div class="wrapper">
+            <p class="subTitle">Do you own a business and want to grow sales fast?</p>
+            <h1>“NEW SALES APPROACH REVEALS 4-STEP METHOD TO GROW SALES FASTER”</h1>
+            <p class="subhead">This brand new HTE METHOD is the simplest way to get more high-ticket leads and sales.
+                Within 60-minutes learn how to close 6-FIGURE deals.</p>
+            <img src="./img/img.png" alt="">
+            <a href="#">
+                <div class="btn">
+                    <p class="btntitle">SAVE YOUR SPOT IN HTE MASTERCLASS</p>
+                    <p class="btnsubtitle">Get for free that took us millions to discover</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="wrapper">
+            <h2 class="title ft-title">Featured in</h2>
+            <img class="mb-Logos" src="./img/mb-Logos.png" alt="Media houses that covered us" />
+            <img class="pc-Logos" src="./img/pc-Logos.png" alt="Media houses that covered us" />
+        </div>
+    </section>
+
+
+    <section class="whoisthisfor">
+        <div class="wrapper">
+            <h2 class="title">Who is this for?</h2>
+
+            <div class="container">
+
+                <div class="who">
+                    <img src="./img/consultation.png" alt="">
+                    <p class="whotitle">Coaches & Consultants</p>
+                </div>
+
+
+                <div class="who">
+                    <img src="./img/Digital-marketer.png" alt="">
+                    <p class="whotitle">Digital Marketers</p>
+                </div>
+
+
+                <div class="who">
+                    <img src="./img/doctor.png" alt="">
+                    <p class="whotitle">Doctors</p>
+                </div>
+
+                <div class="who">
+                    <img src="./img/doctor.png" alt="">
+                    <p class="whotitle">Realtors</p>
+                </div>
+
+                <div class="who">
+                    <img src="./img/HR.png" alt="">
+                    <p class="whotitle">HR entrepreneurs</p>
+                </div>
+
+
+                <div class="who">
+                    <img src="./img/teacher.png" alt="">
+                    <p class="whotitle">Teachers</p>
+                </div>
+
+
+                <div class="who">
+                    <img src="./img/fitness-coach.png" alt="">
+                    <p class="whotitle">Fitness Coaches</p>
+                </div>
+
+
+                <div class="who">
+                    <img src="./img/professional.png" alt="">
+                    <p class="whotitle">Sales Professionals</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="learningSec">
+        <div class="wrapper">
+            <h2 class="title">What You Will Learn?</h2>
+
+            <div class="container">
+
+                <div class="learning">
+                   
+                    <img src="./img/consultation.png" alt="">
+                    <p class="learning-desc">How to position yourself as a specialist in the industry to get paid more?
+                    </p>
+                </div>
+
+                <div class="learning">
+                   
+                    <img src="./img/consultation.png" alt="">
+                    <p class="learning-desc">How to give the best pitch by targeting customers' pains to close sales?
+                    </p>
+                </div>
+
+                <div class="learning">
+                   
+                    <img src="./img/consultation.png" alt="">
+                    <p class="learning-desc">How to present your offer that justifies that 10X ROI for customers?</p>
+                </div>
+
+                <div class="learning">
+                   
+                    <img src="./img/consultation.png" alt="">
+                    <p class="learning-desc">How to become an authority over your customer by consulting rather than
+                        pitching?</p>
+                </div>
+
+
+            </div>
+
+            <h3 class="timer-heading">Only <span id="timer"></span> minutes left</h3>
+       
+        </div>
+    </section>
+
+
+    <section class="CTA" >
+        <div class="wrapper">
+            <h2 class="title">
+                Save Your Spot Now & Get Access to Our High Ticket Sales Framework
+            </h2>
+
+            <p class="subhead">Learn how to get your first <span class="red" >HIGH-PAYING</span> clients through a step-by-step process that has generated over <span class="red" >$125 Millions</span> of revenue in sales for many national and international brands.</p>
+
+            <img src="./img/img.png" alt="">
+            <a href="#">
+                <div class="btn">
+                    <p class="btntitle">SAVE YOUR SPOT IN HTE MASTERCLASS</p>
+                    <p class="btnsubtitle">Get for free that took us millions to discover</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <script defer>
+        document.getElementById('timer').innerHTML =
+            04 + ":" + 59;
+        startTimer();
+
+
+        function startTimer() {
+            var presentTime = document.getElementById('timer').innerHTML;
+            var timeArray = presentTime.split(/[:]+/);
+            var m = timeArray[0];
+            var s = checkSecond((timeArray[1] - 1));
+            if (s == 59) { m = m - 1 }
+            if (m < 0) {
+                return
+            }
+
+            document.getElementById('timer').innerHTML =
+                m + ":" + s;
+            console.log(m)
+            setTimeout(startTimer, 1000);
+
+        }
+
+        function checkSecond(sec) {
+            if (sec < 10 && sec >= 0) { sec = "0" + sec }; // add zero in front of numbers < 10
+            if (sec < 0) { sec = "59" };
+            return sec;
+        }
+    </script>
+
+</body>
+
+</html>
